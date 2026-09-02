@@ -1,0 +1,106 @@
+:root {
+  --paper: #fdfcf9;
+  --paper2: #f4f2ec;
+  --ink: #1e2024;
+  --ink2: #5a5f68;
+  --rule: #e0ddd4;
+  --accent: #b8442a;
+  --gold: #a8842c;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --paper: #16181b;
+    --paper2: #1e2126;
+    --ink: #e9e6df;
+    --ink2: #a0a5ad;
+    --rule: #30343a;
+    --accent: #e07a5c;
+    --gold: #d4ac52;
+  }
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  padding: 0 20px 80px;
+  background: var(--paper);
+  color: var(--ink);
+  font: 16px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+  -webkit-text-size-adjust: 100%;
+}
+
+main { max-width: 720px; margin: 0 auto; }
+
+header {
+  padding: 56px 0 28px;
+  border-bottom: 1px solid var(--rule);
+  margin-bottom: 36px;
+}
+
+h1 { font-size: 30px; line-height: 1.25; margin: 0 0 8px; letter-spacing: -0.01em; }
+h2 {
+  font-size: 20px;
+  margin: 40px 0 12px;
+  padding-top: 20px;
+  border-top: 1px solid var(--rule);
+  letter-spacing: -0.01em;
+}
+h2:first-of-type { border-top: none; padding-top: 0; }
+h3 { font-size: 16px; margin: 24px 0 8px; }
+
+p, li { color: var(--ink2); }
+li { margin-bottom: 6px; }
+strong, b { color: var(--ink); font-weight: 600; }
+
+.lede { font-size: 17px; color: var(--ink2); margin: 0; }
+.stamp { font-size: 13px; color: var(--ink2); margin: 14px 0 0; }
+
+a { color: var(--accent); }
+
+.box {
+  background: var(--paper2);
+  border: 1px solid var(--rule);
+  border-radius: 10px;
+  padding: 16px 18px;
+  margin: 18px 0;
+}
+.box.flag { border-left: 3px solid var(--gold); }
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 16px 0;
+  font-size: 14.5px;
+}
+th, td {
+  text-align: left;
+  padding: 10px 12px 10px 0;
+  border-bottom: 1px solid var(--rule);
+  vertical-align: top;
+}
+th { color: var(--ink); font-weight: 600; }
+td { color: var(--ink2); }
+
+.langswitch {
+  font-size: 14px;
+  margin: 0 0 8px;
+  color: var(--ink2);
+}
+
+footer {
+  margin-top: 56px;
+  padding-top: 20px;
+  border-top: 1px solid var(--rule);
+  font-size: 14px;
+  color: var(--ink2);
+}
+
+code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 0.9em;
+  background: var(--paper2);
+  padding: 1px 5px;
+  border-radius: 4px;
+}
