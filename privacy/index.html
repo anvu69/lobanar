@@ -22,7 +22,7 @@
 thoại, và <strong>không nhận ngày sinh</strong>. Mọi phép tính — tra thước, tra
 la bàn, đổi lịch âm dương — đều chạy trong máy và không cần mạng.</p>
 
-<p>Ba dịch vụ bên thứ ba có nhận dữ liệu từ ứng dụng: <strong>Sentry</strong> và
+<p><strong>Hai</strong> dịch vụ bên thứ ba có nhận dữ liệu từ ứng dụng:
 <strong>Better Stack</strong> nhận dữ liệu kỹ thuật để chúng tôi tìm và sửa lỗi,
 <strong>OneSignal</strong> nhận mã thiết bị để gửi thông báo. Chi tiết bên dưới.</p>
 
@@ -35,16 +35,11 @@ la bàn, đổi lịch âm dương — đều chạy trong máy và không cần
     <th>Vì sao</th>
   </tr>
   <tr>
-    <td><strong>Sentry</strong></td>
-    <td>Báo cáo sự cố: dòng máy, phiên bản iOS, phiên bản ứng dụng, dấu vết ngăn
-        xếp tại thời điểm lỗi.</td>
-    <td>Biết ứng dụng hỏng ở đâu để sửa.</td>
-  </tr>
-  <tr>
     <td><strong>Better Stack</strong></td>
-    <td>Nhật ký kỹ thuật: cùng loại thông tin máy và phiên bản, kèm mô tả thao
-        tác vừa xảy ra khi có lỗi.</td>
-    <td>Dựng lại được chuỗi sự việc dẫn tới lỗi.</td>
+    <td>Báo cáo sự cố và nhật ký kỹ thuật: dòng máy, phiên bản iOS, phiên bản ứng
+        dụng, dấu vết ngăn xếp tại thời điểm lỗi, và mô tả thao tác vừa xảy ra
+        trước đó.</td>
+    <td>Biết ứng dụng hỏng ở đâu, và dựng lại được chuỗi sự việc dẫn tới lỗi.</td>
   </tr>
   <tr>
     <td><strong>OneSignal</strong></td>
@@ -54,7 +49,14 @@ la bàn, đổi lịch âm dương — đều chạy trong máy và không cần
   </tr>
 </table>
 
-<p>Ba mục trên <strong>không kèm tên, email, số điện thoại hay bất kỳ thứ gì
+<div class="box">
+  <p style="margin:0"><strong>Về thư viện Sentry.</strong> Ứng dụng dùng thư viện
+  mã nguồn mở của Sentry để bắt sự cố, nhưng dữ liệu được gửi tới máy chủ của
+  <strong>Better Stack</strong>. Công ty Sentry <strong>không nhận gì</strong> từ
+  ứng dụng này. Chúng tôi nói ra vì tên thư viện dễ làm người đọc hiểu nhầm.</p>
+</div>
+
+<p>Hai mục trên <strong>không kèm tên, email, số điện thoại hay bất kỳ thứ gì
 nhận dạng cá nhân</strong> mà chúng tôi thu thập, vì ứng dụng không thu thập
 những thứ đó.</p>
 
@@ -138,8 +140,8 @@ của trẻ em.</p>
   <li><strong>Xoá dữ liệu trong máy:</strong> gỡ ứng dụng.</li>
   <li><strong>Ngừng gửi mã thiết bị:</strong> tắt thông báo trong Cài đặt iOS.</li>
   <li><strong>Yêu cầu xoá dữ liệu phía dịch vụ bên thứ ba:</strong> liên hệ
-      chúng tôi theo mục dưới. Chúng tôi sẽ xoá bản ghi tương ứng ở Sentry,
-      Better Stack và OneSignal.</li>
+      chúng tôi theo mục dưới. Chúng tôi sẽ xoá bản ghi tương ứng ở Better Stack
+      và OneSignal.</li>
 </ul>
 
 <h2>Thay đổi chính sách</h2>
@@ -169,8 +171,8 @@ trang sẽ đổi theo.</p>
 address or phone number, and it <strong>never asks for a date of birth</strong>.
 All calculations run on the device and work offline.</p>
 
-<p>Three third-party services receive data: <strong>Sentry</strong> and
-<strong>Better Stack</strong> receive technical data so we can find and fix
+<p><strong>Two</strong> third-party services receive data:
+<strong>Better Stack</strong> receives technical data so we can find and fix
 defects; <strong>OneSignal</strong> receives a device identifier so we can send
 notifications.</p>
 
@@ -179,16 +181,11 @@ notifications.</p>
 <table>
   <tr><th style="width:26%">Service</th><th style="width:37%">Data</th><th>Why</th></tr>
   <tr>
-    <td><strong>Sentry</strong></td>
-    <td>Crash reports: device model, iOS version, app version, stack trace at the
-        moment of failure.</td>
-    <td>To know where the app breaks.</td>
-  </tr>
-  <tr>
     <td><strong>Better Stack</strong></td>
-    <td>Technical logs: the same device and version information, plus a
-        description of what the app was doing.</td>
-    <td>To reconstruct what led to a failure.</td>
+    <td>Crash reports and technical logs: device model, iOS version, app version,
+        the stack trace at the moment of failure, and a description of what the
+        app was doing beforehand.</td>
+    <td>To know where the app breaks, and to reconstruct what led to it.</td>
   </tr>
   <tr>
     <td><strong>OneSignal</strong></td>
@@ -197,6 +194,14 @@ notifications.</p>
     <td>To deliver notifications to this device.</td>
   </tr>
 </table>
+
+<div class="box">
+  <p style="margin:0"><strong>About the Sentry library.</strong> The app uses
+  Sentry's open-source crash-reporting library, but the data is sent to
+  <strong>Better Stack</strong>'s servers. Sentry the company
+  <strong>receives nothing</strong> from this app. We say so because the library
+  name is easy to misread.</p>
+</div>
 
 <p>None of this carries a name, email address, phone number or any other personal
 identifier, because the app never collects those.</p>
@@ -273,8 +278,7 @@ collect data from them.</p>
   <li><strong>Stop sending the device token:</strong> turn off notifications in
       iOS Settings.</li>
   <li><strong>Request deletion from third-party services:</strong> contact us and
-      we will delete the corresponding records at Sentry, Better Stack and
-      OneSignal.</li>
+      we will delete the corresponding records at Better Stack and OneSignal.</li>
 </ul>
 
 <h2>Changes</h2>
