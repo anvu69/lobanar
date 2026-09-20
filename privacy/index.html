@@ -13,7 +13,7 @@
   <p class="langswitch"><a href="../">Trang hỗ trợ</a> · <a href="#english">English below</a></p>
   <h1>Chính sách riêng tư</h1>
   <p class="lede">Ứng dụng <strong>Lỗ Ban AR: Thước, La bàn, Lịch</strong></p>
-  <p class="stamp">Cập nhật 17/09/2026</p>
+  <p class="stamp">Cập nhật 20/09/2026</p>
 </header>
 
 <h2>Tóm tắt</h2>
@@ -22,48 +22,22 @@
 thoại, và <strong>không nhận ngày sinh</strong>. Mọi phép tính — tra thước, tra
 la bàn, đổi lịch âm dương — đều chạy trong máy và không cần mạng.</p>
 
-<p><strong>Hai</strong> dịch vụ bên thứ ba có nhận dữ liệu từ ứng dụng:
-<strong>Better Stack</strong> nhận dữ liệu kỹ thuật để chúng tôi tìm và sửa lỗi,
-<strong>OneSignal</strong> nhận mã thiết bị để gửi thông báo. Chi tiết bên dưới.</p>
+<p><strong>Không dữ liệu nào rời khỏi máy bạn.</strong> Ứng dụng không có
+máy chủ, không có dịch vụ bên thứ ba nào nhận dữ liệu, và không có thư viện nào
+gửi thống kê hay báo cáo sự cố đi. Chi tiết bên dưới.</p>
 
-<h2>Dữ liệu được gửi ra ngoài máy</h2>
+<h2>Dữ liệu gửi ra ngoài máy</h2>
 
-<table>
-  <tr>
-    <th style="width:26%">Dịch vụ</th>
-    <th style="width:37%">Dữ liệu</th>
-    <th>Vì sao</th>
-  </tr>
-  <tr>
-    <td><strong>Better Stack</strong></td>
-    <td>Báo cáo sự cố và nhật ký kỹ thuật: dòng máy, phiên bản iOS, phiên bản ứng
-        dụng, dấu vết ngăn xếp tại thời điểm lỗi, và mô tả thao tác vừa xảy ra
-        trước đó.</td>
-    <td>Biết ứng dụng hỏng ở đâu, và dựng lại được chuỗi sự việc dẫn tới lỗi.</td>
-  </tr>
-  <tr>
-    <td><strong>OneSignal</strong></td>
-    <td><strong>Mã đăng ký thông báo của thiết bị</strong> (push token) và một mã
-        người đăng ký do OneSignal cấp.</td>
-    <td>Gửi được thông báo tới đúng máy này.</td>
-  </tr>
-</table>
+<p><strong>Không có.</strong> Bản này không mang thư viện mạng nào: không dịch
+vụ thống kê, không báo cáo sự cố tự động, không thông báo đẩy. Ứng dụng chạy
+đầy đủ ở chế độ máy bay.</p>
 
 <div class="box">
-  <p style="margin:0"><strong>Về thư viện Sentry.</strong> Ứng dụng dùng thư viện
-  mã nguồn mở của Sentry để bắt sự cố, nhưng dữ liệu được gửi tới máy chủ của
-  <strong>Better Stack</strong>. Công ty Sentry <strong>không nhận gì</strong> từ
-  ứng dụng này. Chúng tôi nói ra vì tên thư viện dễ làm người đọc hiểu nhầm.</p>
-</div>
-
-<p>Hai mục trên <strong>không kèm tên, email, số điện thoại hay bất kỳ thứ gì
-nhận dạng cá nhân</strong> mà chúng tôi thu thập, vì ứng dụng không thu thập
-những thứ đó.</p>
-
-<div class="box">
-  <p style="margin:0"><strong>Mã đăng ký thông báo là một định danh thiết bị.</strong>
-  Nó không phải tên hay email, nhưng nó chỉ đích danh một chiếc máy. Chúng tôi
-  nói ra điều này thay vì gọi chung là “dữ liệu ẩn danh”.</p>
+  <p style="margin:0"><strong>Trang này từng khai khác.</strong> Bản trước nói
+  hai dịch vụ — Better Stack và OneSignal — có nhận dữ liệu. Đó là hạ tầng đã
+  dựng sẵn cho một bản sau, <strong>chưa nối vào ứng dụng</strong>, và lời khai
+  ấy đã được sửa. Nếu một bản sau bật chúng lên, trang này được sửa
+  <strong>trước</strong> khi bản đó lên App Store.</p>
 </div>
 
 <h2>Dữ liệu KHÔNG rời khỏi máy</h2>
@@ -134,17 +108,19 @@ bạn</strong>, không liệt kê và không hiển thị chúng ở bất cứ 
 
 <h2>Thông báo</h2>
 
-<p>Có hai loại, và chúng khác nhau:</p>
+<p>Chỉ có một loại, và đây là chỗ hay bị hiểu nhầm nhất:</p>
 
 <ul>
   <li><strong>Nhắc lịch</strong> — do máy bạn tự phát theo lịch bạn đặt.
       Không đi qua máy chủ nào.</li>
-  <li><strong>Thông báo từ chúng tôi</strong> — gửi qua OneSignal, ví dụ báo có
-      bản cập nhật đáng chú ý.</li>
+  <li><strong>Thông báo đẩy</strong> — <strong>không có</strong>. Ứng dụng
+      không gửi thông báo nào từ máy chủ, và không đăng ký mã thiết bị với dịch
+      vụ nào.</li>
 </ul>
 
-<p>Tắt thông báo bất cứ lúc nào trong Cài đặt của iOS. Tắt rồi thì mã thiết bị
-không còn dùng được để gửi tới máy bạn nữa.</p>
+<p>Ứng dụng hỏi quyền thông báo khi bạn bấm “Bật thông báo” ở màn Nhắc lịch, và
+quyền ấy chỉ dùng cho lời nhắc do chính máy bạn phát. Tắt bất cứ lúc nào trong
+Cài đặt của iOS.</p>
 
 <h2>Không quảng cáo, không theo dõi</h2>
 
@@ -161,10 +137,9 @@ của trẻ em.</p>
 
 <ul>
   <li><strong>Xoá dữ liệu trong máy:</strong> gỡ ứng dụng.</li>
-  <li><strong>Ngừng gửi mã thiết bị:</strong> tắt thông báo trong Cài đặt iOS.</li>
-  <li><strong>Yêu cầu xoá dữ liệu phía dịch vụ bên thứ ba:</strong> liên hệ
-      chúng tôi theo mục dưới. Chúng tôi sẽ xoá bản ghi tương ứng ở Better Stack
-      và OneSignal.</li>
+  <li><strong>Tắt lời nhắc:</strong> tắt thông báo trong Cài đặt iOS.</li>
+  <li><strong>Yêu cầu xoá dữ liệu ở phía chúng tôi:</strong> không có gì để
+      xoá — chúng tôi không giữ bản ghi nào về bạn.</li>
 </ul>
 
 <h2>Thay đổi chính sách</h2>
@@ -186,7 +161,7 @@ trang sẽ đổi theo.</p>
 
 <h1 id="english" style="margin-top:40px">Privacy Policy</h1>
 <p class="lede"><strong>Lo Ban AR: Ruler, Compass, Calendar</strong></p>
-<p class="stamp">Updated 17 September 2026</p>
+<p class="stamp">Updated 20 September 2026</p>
 
 <h2>Summary</h2>
 
@@ -195,44 +170,23 @@ address or phone number, and it <strong>never asks for a date of birth</strong>.
 All calculations run on the device and work offline.</p>
 
 <p><strong>Two</strong> third-party services receive data:
-<strong>Better Stack</strong> receives technical data so we can find and fix
-defects; <strong>OneSignal</strong> receives a device identifier so we can send
-notifications.</p>
+<strong>No data leaves your device.</strong> The app has no server, no
+third-party service receives anything, and it carries no library that sends
+analytics or crash reports.</p>
 
 <h2>Data that leaves the device</h2>
 
-<table>
-  <tr><th style="width:26%">Service</th><th style="width:37%">Data</th><th>Why</th></tr>
-  <tr>
-    <td><strong>Better Stack</strong></td>
-    <td>Crash reports and technical logs: device model, iOS version, app version,
-        the stack trace at the moment of failure, and a description of what the
-        app was doing beforehand.</td>
-    <td>To know where the app breaks, and to reconstruct what led to it.</td>
-  </tr>
-  <tr>
-    <td><strong>OneSignal</strong></td>
-    <td><strong>The device push token</strong> and a subscriber identifier issued
-        by OneSignal.</td>
-    <td>To deliver notifications to this device.</td>
-  </tr>
-</table>
+<p><strong>None.</strong> This release ships no networking library: no
+analytics, no automatic crash reporting, no push notifications. The app works
+fully in airplane mode.</p>
 
 <div class="box">
-  <p style="margin:0"><strong>About the Sentry library.</strong> The app uses
-  Sentry's open-source crash-reporting library, but the data is sent to
-  <strong>Better Stack</strong>'s servers. Sentry the company
-  <strong>receives nothing</strong> from this app. We say so because the library
-  name is easy to misread.</p>
-</div>
-
-<p>None of this carries a name, email address, phone number or any other personal
-identifier, because the app never collects those.</p>
-
-<div class="box">
-  <p style="margin:0"><strong>A push token is a device identifier.</strong> It is
-  not a name or an email address, but it does point at one specific device. We
-  say so plainly rather than calling it “anonymous data”.</p>
+  <p style="margin:0"><strong>This page used to say otherwise.</strong> An
+  earlier version named two services — Better Stack and OneSignal — as
+  recipients. That was infrastructure prepared for a later release and
+  <strong>never wired into the app</strong>; the claim has been corrected. If a
+  later release turns them on, this page is updated <strong>before</strong> that
+  release reaches the App Store.</p>
 </div>
 
 <h2>Data that stays on the device</h2>
@@ -312,7 +266,9 @@ them anywhere.</p>
 <ul>
   <li><strong>Calendar reminders</strong> are scheduled by your own device. They
       do not pass through any server.</li>
-  <li><strong>Notifications from us</strong> are delivered through OneSignal.</li>
+  <li><strong>Push notifications</strong> — <strong>none</strong>. The app
+      sends nothing from a server and registers no device token with any
+      service.</li>
 </ul>
 
 <p>You can turn notifications off at any time in iOS Settings.</p>
@@ -332,10 +288,10 @@ collect data from them.</p>
 
 <ul>
   <li><strong>Erase on-device data:</strong> delete the app.</li>
-  <li><strong>Stop sending the device token:</strong> turn off notifications in
-      iOS Settings.</li>
-  <li><strong>Request deletion from third-party services:</strong> contact us and
-      we will delete the corresponding records at Better Stack and OneSignal.</li>
+  <li><strong>Stop reminders:</strong> turn off notifications in iOS
+      Settings.</li>
+  <li><strong>Request deletion on our side:</strong> there is nothing to
+      delete — we hold no record of you.</li>
 </ul>
 
 <h2>Changes</h2>
