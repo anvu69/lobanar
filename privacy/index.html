@@ -60,31 +60,16 @@ này</strong>. Gỡ ứng dụng là xoá hết.</p>
 gian thật. Khung hình đang ngắm chỉ nằm trong bộ nhớ tạm và mất đi khi bạn đóng
 màn hình đo.</p>
 
-<p><strong>Ứng dụng có chụp ảnh — nhưng chỉ khi bạn bấm nút chụp.</strong> Không
-tấm ảnh nào được tạo ra ngoài cú bấm đó; ứng dụng không tự chụp lúc nào cả. Tấm
-ảnh gồm khung hình tại thời điểm bấm, con số đo và tên ứng dụng. Bấm chụp là có
-ảnh, kể cả khi ngay sau đó bạn bỏ số đo đi.</p>
+<p><strong>Bản này không chụp và không lưu ảnh.</strong> Không có nút chụp ở
+màn đo, và ứng dụng không có đường nào ghi ảnh ra máy. Khung hình chỉ đi qua bộ
+nhớ tạm để tính khoảng cách rồi mất đi.</p>
 
-<p>Ảnh nằm lại trong máy bạn, ở hai chỗ:</p>
+<p>Vì thế ứng dụng <strong>không hỏi quyền Thư viện ảnh</strong> và
+<strong>không khai quyền ấy</strong> trong hồ sơ của mình. Nó không ghi, không
+đọc, không liệt kê và không xoá ảnh nào của bạn.</p>
 
-<ul>
-  <li>thư mục <strong>“Anh do”</strong> của riêng ứng dụng — mở được và
-      <strong>xoá được bằng app Files</strong> của iOS, không cần qua ứng dụng
-      này;</li>
-  <li>và một bản trong <strong>Thư viện ảnh</strong> của máy.</li>
-</ul>
-
-<p>Quyền Thư viện ảnh là <strong>chỉ thêm</strong>: ứng dụng ghi ảnh mới vào và
-<strong>không đọc, không liệt kê, không xoá</strong> ảnh nào có sẵn của bạn, cũng
-không tạo album. Ứng dụng <strong>không gắn toạ độ vị trí vào ảnh</strong>.</p>
-
-<p><strong>Không tấm ảnh nào được gửi đi đâu.</strong> Chúng tôi không vận hành
-máy chủ nào cho ứng dụng này, và ứng dụng không có đường nào gửi ảnh ra mạng.</p>
-
-<p>Ứng dụng hỏi quyền camera khi bạn bấm nút đo, và hỏi quyền Thư viện ảnh khi
-bạn bấm nút chụp. Từ chối quyền camera thì mọi cách nhập số đo khác vẫn dùng đầy
-đủ; từ chối quyền Thư viện ảnh thì ảnh vẫn được lưu trong thư mục “Anh do”, chỉ
-là không có bản thứ hai ngoài thư viện.</p>
+<p>Ứng dụng chỉ hỏi quyền camera, và chỉ khi bạn bấm nút đo. Từ chối thì mọi
+cách nhập số đo khác vẫn dùng đầy đủ.</p>
 
 <h2>Vị trí</h2>
 
@@ -207,34 +192,17 @@ of it.</p>
 space. The live frame exists in memory only, and is gone when you close the
 measuring screen.</p>
 
-<p><strong>The app does take photographs — but only when you tap the capture
-button.</strong> No image is ever created outside that tap; the app never
-captures on its own. The photograph holds the frame at the moment of the tap, the
-measurement, and the app's name. Tapping capture gives you a photograph even if
-you discard the measurement immediately afterwards.</p>
+<p><strong>This release takes and stores no photographs.</strong> There is no
+capture button on the measuring screen, and the app has no path for writing an
+image to your device. The frame passes through memory to compute the distance
+and is then gone.</p>
 
-<p>The photograph stays on your device, in two places:</p>
+<p>The app therefore <strong>does not request Photo Library access</strong> and
+<strong>does not declare that permission</strong> in its manifest. It does not
+write, read, list or delete any photo of yours.</p>
 
-<ul>
-  <li>the app's own <strong>“Anh do”</strong> folder — which you can open, and
-      <strong>delete from, in the iOS Files app</strong>, without going through
-      this app;</li>
-  <li>and one copy in your device's <strong>Photo Library</strong>.</li>
-</ul>
-
-<p>Photo Library access is <strong>add-only</strong>: the app writes new images
-in, and <strong>does not read, list or delete</strong> any existing photo of
-yours, nor create albums. The app <strong>does not attach location coordinates to
-the image</strong>.</p>
-
-<p><strong>No photograph is transmitted anywhere.</strong> We do not run a server
-for this app, and the app has no path for sending an image over the network.</p>
-
-<p>Camera permission is requested when you tap the measure button, and Photo
-Library permission when you tap capture. Decline the camera and every other way
-of entering a measurement still works; decline the Photo Library and the
-photograph is still written to the “Anh do” folder — there is simply no second
-copy outside it.</p>
+<p>The app asks for camera permission only, and only when you tap the measure
+button. Decline it and every other way of entering a measurement still works.</p>
 
 <h2>Location</h2>
 
